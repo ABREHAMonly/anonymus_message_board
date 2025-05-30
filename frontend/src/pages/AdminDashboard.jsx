@@ -39,14 +39,14 @@ function AdminDashboard() {
         }
 
         if (activeSection === 'messages') {
-          const messagesRes = await fetch('http://localhost:5000/api/messages', {
+          const messagesRes = await fetch('https://anonymus-message-board.onrender.com/api/messages', {
             headers: { 'Authorization': `Bearer ${token}` }
           });
           const messagesData = await messagesRes.json();
           setMessages(messagesData);
           setFilteredMessages(messagesData);
         } else {
-          const adminsRes = await fetch('http://localhost:5000/api/admin/admins', {
+          const adminsRes = await fetch('https://anonymus-message-board.onrender.com/api/admin/admins', {
             headers: { 'Authorization': `Bearer ${token}` }
           });
           const adminsData = await adminsRes.json();
@@ -65,7 +65,7 @@ function AdminDashboard() {
   const deleteMessage = async (id) => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`http://localhost:5000/api/admin/message/${id}`, {
+      const response = await fetch(`https://anonymus-message-board.onrender.com/api/admin/message/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -96,8 +96,8 @@ function AdminDashboard() {
     try {
       const token = localStorage.getItem('adminToken');
       const url = adminForm.editingId 
-        ? `http://localhost:5000/api/admin/admins/${adminForm.editingId}`
-        : 'http://localhost:5000/api/admin/admins';
+        ? `https://anonymus-message-board.onrender.com/api/admin/admins/${adminForm.editingId}`
+        : 'https://anonymus-message-board.onrender.com/api/admin/admins';
 
       const response = await fetch(url, {
         method: adminForm.editingId ? 'PUT' : 'POST',
@@ -126,7 +126,7 @@ function AdminDashboard() {
     if (window.confirm('Are you sure you want to delete this admin?')) {
       try {
         const token = localStorage.getItem('adminToken');
-        await fetch(`http://localhost:5000/api/admin/admins/${id}`, {
+        await fetch(`https://anonymus-message-board.onrender.com/api/admin/admins/${id}`, {
           method: 'DELETE',
           headers: { 'Authorization': `Bearer ${token}` }
         });

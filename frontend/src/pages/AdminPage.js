@@ -22,7 +22,7 @@ function AdminPage() {
       const token = localStorage.getItem("adminToken");
       if (token) {
         try {
-          const response = await fetch("http://localhost:5000/api/admin/verify", {
+          const response = await fetch("https://anonymus-message-board.onrender.com/api/admin/verify", {
             headers: { Authorization: `Bearer ${token}` }
           });
           if (response.ok) navigate("/admin-dashboard");
@@ -79,7 +79,7 @@ function AdminPage() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/admin/login", {
+      const response = await fetch("https://anonymus-message-board.onrender.com/api/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
