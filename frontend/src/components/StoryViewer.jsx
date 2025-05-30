@@ -162,7 +162,7 @@ const StoryViewer = ({ onNewStoryUpload }) => {
                             </button>
                             
                             <img
-                                src={`https://anonymus-message-board.onrender.com${story.imageUrl}`}
+                                src={`https://anonymus-message-board.onrender.com${currentStory.imageUrl}`}
                                 alt="Story"
                                 style={styles.modalImage}
                             />
