@@ -5,8 +5,8 @@ const uploadStory = async (req, res) => {
     try {
         const { text } = req.body;
         
-        // If an image is uploaded, store its path in imageUrl
-        const imageUrl = req.file ? `/uploads/${req.file.filename}` : "";
+        const imageUrl = req.file ? req.file.path : "";
+
 
         const newStory = new Story({
             text,
