@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://anonymus-message-board.onrender.com",
+    baseURL: "https://anonymus-message-board.onrender.com/api",
     headers: {
         "Content-Type": "application/json",
     },
