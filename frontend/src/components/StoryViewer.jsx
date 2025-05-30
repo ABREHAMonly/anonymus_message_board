@@ -113,9 +113,9 @@ const StoryViewer = ({ onNewStoryUpload }) => {
                                 >
                                     <div style={styles.storyBorder}>
                                         <img
-                                            src={`https://anonymus-message-board.onrender.com${story.imageUrl}`}
-                                            alt="Story"
-                                            style={styles.storyImage}
+                                        src={story.imageUrl}
+                                        alt="Story"
+                                        style={styles.storyImage}
                                         />
                                     </div>
                                     <p style={styles.username}>{story.user?.name || "Anonymous"}</p>
@@ -162,7 +162,7 @@ const StoryViewer = ({ onNewStoryUpload }) => {
                             </button>
                             
                             <img
-                                src={`https://anonymus-message-board.onrender.com${currentStory.imageUrl}`}
+                                src={currentStory.imageUrl}
                                 alt="Story"
                                 style={styles.modalImage}
                             />
