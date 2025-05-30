@@ -30,7 +30,10 @@ const upload = multer({ storage });
 const app = express();
 
 // Middleware setup
-app.use(cors());
+app.use(cors({
+  origin: 'https://anonymus-message-board.vercel.app',
+  credentials: true
+}));
 app.use(express.json());
 
 // Serve static files (images) from 'uploads' folder
