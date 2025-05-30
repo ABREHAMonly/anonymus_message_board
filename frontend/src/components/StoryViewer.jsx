@@ -113,7 +113,7 @@ const StoryViewer = ({ onNewStoryUpload }) => {
                                 >
                                     <div style={styles.storyBorder}>
                                         <img
-                                            src={`https://anonymus-message-board.onrender.com${story.imageUrl}`}
+                                            src={`https://anonymus-message-board.vercel.app${story.imageUrl}`}
                                             alt="Story"
                                             style={styles.storyImage}
                                         />
@@ -162,7 +162,7 @@ const StoryViewer = ({ onNewStoryUpload }) => {
                             </button>
                             
                             <img
-                                src={`https://anonymus-message-board.onrender.com${currentStory.imageUrl}`}
+                                src={`https://anonymus-message-board.vercel.app${currentStory.imageUrl}`}
                                 alt="Story"
                                 style={styles.modalImage}
                             />
